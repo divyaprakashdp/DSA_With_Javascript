@@ -9,22 +9,22 @@ function cc(card) {
     case 5:
     case 6:
       count++;
-    case 7:
-    case 8:
-    case 9:
-      count = count
+      break;
     case 10:
     case 'J':
     case 'Q':
     case 'K':
     case 'A':
       count--;
+      break;
   }
 
+  let holdBet = " Hold"
   if(count>0){
-    return count+" Bet"
+    holdBet = " Bet"
   }
-  return count+" Hold"
+
+  return count+" "+holdBet
   // Only change code above this line
 }
 
