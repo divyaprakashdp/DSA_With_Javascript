@@ -1,18 +1,19 @@
-class LinkedListImpl {
+class Node {
   constructor(value) {
-    this.head = {
-      value: value,
-      next: null,
-    };
+    this.value = value;
+    this.next = null;
+  }
+}
+
+class LinkedListImplWithClass {
+  constructor(value) {
+    this.head = new Node(value);
     this.tail = this.head;
     this.length = 1;
   }
 
   append(value) {
-    const newNode = {
-      value: value,
-      next: null,
-    };
+    const newNode = new Node(value);
     this.tail.next = newNode;
     this.tail = newNode;
     this.length++;
@@ -20,19 +21,15 @@ class LinkedListImpl {
   }
 
   prepend(value) {
-    const newNode = {
-      value: value,
-      next: null,
-    };
-
-    newNode.next = this.head;
+    const newNode = new Node(value);
+    newNode.next = this.head; //set the existing head as next of newNode
     this.head = newNode;
     this.length++;
     return this;
   }
 }
 
-const myLinkedList = new LinkedListImpl(10);
+const myLinkedList = new LinkedListImplWithClass(10);
 myLinkedList.append(20);
 myLinkedList.append(30);
 myLinkedList.append(40);
