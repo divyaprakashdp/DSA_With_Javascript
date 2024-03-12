@@ -18,7 +18,17 @@ const twoSum = (nums, target) => {
 };
 
 //O(n)
-const twoSumOptimized = (nums, target) => {};
+const twoSumOptimized = (nums, target) => {
+  const numMap = {};
+  for (let index = 0; index < nums.length; index++) {
+    const itemsToSearch = target - nums[index];
+    if (numMap[itemsToSearch] !== undefined) {
+      return [numMap[itemsToSearch], index];
+    }
+    numMap[nums[index]] = index;
+  }
+  return [];
+};
 
 // test cases
 
@@ -27,8 +37,19 @@ console.log(twoSum([2, 7, 11, 15], 9)); //[0,1]
 console.log(twoSum([11, 15, 2, 7], 9)); //[2,3]
 console.log(twoSum([3, 3], 6)); //[0,1]
 console.log(twoSum([-1, -2, -3, 4, -5], 2)); //[1, 3]
-console.log(twoSum([-1, -2, -3, -4, -5], -8)); //[2, 4]
+console.log(twoSum([-1, -2, -3, -4, -5], -8)); //[2, 4] this won't work here
 console.log(
   twoSum([1000000000, 2000000000, 3000000000, 4000000000], 5000000000)
 ); //[1,2]
 console.log(twoSum([1, 2, 3, 4, 5], 20));
+
+console.log(twoSumOptimized([0, 14, 4], 4)); //[0,2]
+console.log(twoSumOptimized([2, 7, 11, 15], 9)); //[0,1]
+console.log(twoSumOptimized([11, 15, 2, 7], 9)); //[2,3]
+console.log(twoSumOptimized([3, 3], 6)); //[0,1]
+console.log(twoSumOptimized([-1, -2, -3, 4, -5], 2)); //[1, 3]
+console.log(twoSumOptimized([-1, -2, -3, -4, -5], -8)); //[2, 4]
+console.log(
+  twoSumOptimized([1000000000, 2000000000, 3000000000, 4000000000], 5000000000)
+); //[1,2]
+console.log(twoSumOptimized([1, 2, 3, 4, 5], 20));
