@@ -103,3 +103,17 @@ const sortedSquareArr = (arr) => {
 
 let ssArr = [-4, -1, 0, 3, 10];
 console.log(sortedSquareArr(ssArr));
+
+
+
+// https://leetcode.com/problems/is-subsequence/
+
+const isSubsequence = function (s, t) {
+    let subsequence = 0;
+    for (let i = 0; i < t.length; i++) {
+        if (s[subsequence] === t[i]) {
+            subsequence++
+        }
+    }
+    return subsequence === s.length;
+};
