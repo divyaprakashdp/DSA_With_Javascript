@@ -1,38 +1,38 @@
-function step1(error = false) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (!error) {
-                resolve("✅ Step 1 Success")
-            } else {
-                reject('❌ Step 1 Failed')
-            }
-        }, 30000)
-    })
-}
+// function step1(error = false) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (!error) {
+//                 resolve("✅ Step 1 Success")
+//             } else {
+//                 reject('❌ Step 1 Failed')
+//             }
+//         }, 30000)
+//     })
+// }
 
-function step2(error = false) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (!error) {
-                resolve("✅ Step 2 Success")
-            } else {
-                reject('❌ Step 2 Failed')
-            }
-        }, 1000)
-    })
-}
+// function step2(error = false) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (!error) {
+//                 resolve("✅ Step 2 Success")
+//             } else {
+//                 reject('❌ Step 2 Failed')
+//             }
+//         }, 1000)
+//     })
+// }
 
-function step3(error = false) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (!error) {
-                resolve("✅ Step 3 Success")
-            } else {
-                reject('❌ Step 3 Failed')
-            }
-        }, 300)
-    })
-}
+// function step3(error = false) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (!error) {
+//                 resolve("✅ Step 3 Success")
+//             } else {
+//                 reject('❌ Step 3 Failed')
+//             }
+//         }, 300)
+//     })
+// }
 
 // step1()
 //     .then((res) => {
@@ -94,3 +94,14 @@ value(if fulfilled) or reason(if rejected). */
 // Promise.any([step1(), step2(true), step3(true)])
 //     .then((res) => console.log(res))
 //     .catch((err) => console.log(err))
+
+let a = new Promise((res, rej) => {
+    let b = 2 + 2;
+    if (b == 3) {
+        res("sucess")
+    } else {
+        rej("failure")
+    }
+})
+a.then(res => console.log("this is using then and it is " + res))
+    .catch(res => console.log("this is catch data and it is " + res))

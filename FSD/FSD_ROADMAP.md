@@ -4,6 +4,7 @@
 | **Status** | **Topic**                     | **Links**                                                                                          |
 |------------|-------------------------------|----------------------------------------------------------------------------------------------------|
 | [ ]        | How the Web Works             | [How the Web Works - MDN](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works) |
+| [ ]        | How browsers load websites             | [How browsers load websites - MDN](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites) |
 | [ ]        | Communication Protocols       | [Communication Protocols - Cloudflare](https://www.cloudflare.com/en-gb/learning/network-layer/what-is-a-protocol/) |
 | [ ]        | HTTP                          | [What is HTTP?](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)                  |
 | [ ]        | HTTPS                         | [What is HTTPS?](https://www.cloudflare.com/learning/ssl/what-is-https/)               |
